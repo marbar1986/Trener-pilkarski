@@ -1,0 +1,25 @@
+{
+  "name": "trener-pilkarski",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marbar1986/Trener-pilkarski.git"
+  },
+  "author": "marcin barys",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marbar1986/Trener-pilkarski/issues"
+  },
+  "homepage": "https://github.com/marbar1986/Trener-pilkarski#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "jquery": "^3.3.1"
+  }
+}

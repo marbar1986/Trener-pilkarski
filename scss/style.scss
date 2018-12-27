@@ -1,0 +1,1118 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.ball__pic{
+  position: absolute;
+  top:30px;
+  background:url("../images/ball_animation/ball_all2.png")0 0;
+  width:30px;
+  height:30px;
+}
+.ball__pic2{
+  background:url("../images/ball_animation/ball_all2.png")0 0;
+  position: relative;
+  display: inline-block;
+  float: left;
+  top:-5px;
+  width:30px;
+  height:30px;
+}
+
+#header{
+  width:100%;
+  height:100px;
+  .menu{
+    position: fixed;
+    z-index:2;
+    // position: absolute;
+    // top:0;
+    // left:0;
+    width:100%;
+    height:100px;
+    position: fixed;
+    box-shadow: 0 4px 2px -2px white;
+    background-color: white;
+    &__logo{
+      float: left;
+      display:inline-block;
+      width:10%;
+      height:100%;
+      background-image: url("../images/logo.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 40% 40%;
+      @media (max-width: 450px) {
+        width:20%;
+      }
+    }
+    &__button{
+      display:none;
+      position: absolute;
+      top:0;
+      right:0;
+      border: 2px solid black;
+      height:100%;
+      line-height: 100px;
+      font-size: 16px;
+      width:10%;
+      float:right;
+      cursor:pointer;
+      text-align: center;
+      @media (max-width: 450px) {
+        width:20%;
+      }
+      @media (max-width: 250px) {
+        width:20%;
+        font-size: 12px;
+      }
+    }
+    &__list{
+      li{
+        display:inline;
+        width:9%;
+        float: left;
+        height: 100%;
+        background-repeat: no-repeat;
+        text-align: center;
+        a{
+          display: block;
+          width:100%;
+          font-weight: bold;
+          // text-transform: uppercase;
+          height:100%;
+          line-height:100px;
+          text-decoration: none;
+          color:black;
+          cursor:pointer;
+        }
+      }
+    }
+    &__list2{
+      width:80%;
+      @media (max-width: 450px) {
+        width:60%;
+      }
+      li{
+        opacity:0.5;
+        display:inline-block;
+        width:100%;
+        float: right;
+        height: 25px;
+        background-repeat: no-repeat;
+        text-align: center;
+        a{
+          background-color: white;
+          display: block;
+          width:100%;
+          font-weight: bold;
+          // text-transform: uppercase;
+          height:25px;
+          line-height:25px;
+          text-decoration: none;
+          color:black;
+          cursor:pointer;
+          &:hover{
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+#bg{
+  width:100%;
+  height:3000px;
+  z-index:-100;
+  background-image: url("../images/field5.png");
+  box-shadow:0 0 25px 15px white inset;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  @media (max-width: 800px) {
+    height:2100px;
+  }
+  @media (max-width: 400px) {
+    height:1650px;
+  }
+
+}
+
+#start{
+  width:100%;
+  height:250px;
+  // position:relative;
+  // top:25%;
+  // left:50%;
+  // margin-left:-37.5px;
+  // .arrow{
+  //   position: relative;
+  //   top:10%;
+  //   left:50%;
+  //   margin-left:-25px;
+  //   width:50px;
+  //   height:100px;
+  //   background: url("../images/arrow.png") 0 0;
+  //   z-index:1;
+  // }
+  // @media (max-width: 800px) {
+  //   height:200px;
+  // }
+  // @media (max-width: 400px) {
+  //   height:150px;
+  // }
+}
+.sprint_player{
+  position: fixed;
+  top:180px;
+  left:50%;
+  margin-left:-37.5px;
+  width:75px;
+  height:150px;
+  background:url("../images/sprint1.png") 0 0;
+  @media (max-width: 800px) {
+    width:37.5px;
+    height:75px;
+    background:url("../images/sprint2.png") 0 0;
+    top:180px;
+    left:50%;
+    margin-left:-18.75px;
+  }
+  @media (max-width: 400px) {
+    width:18px;
+    height:37px;
+    background:url("../images/sprint3.png") 0 0;
+    top:180px;
+    left:50%;
+    margin-left:-9px;
+  }
+}
+
+#reflex{
+  width:100%;
+  height:300px;
+  @media (max-width: 800px) {
+    height:200px;
+  }
+  @media (max-width: 400px) {
+    height:150px;
+  }
+}
+
+.reflex__text{
+  position: relative;
+  top:15%;
+  width:20%;
+  float: right;
+  margin-right: -55%;
+  @media (max-width: 800px) {
+top:5%;
+  }
+  p{
+    font-size: 22px;
+    color:white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px darkgrey, 0 0 25px white, 0 0 5px black;
+    @media (max-width: 800px) {
+      font-size: 14px;
+    }
+    @media (max-width: 400px) {
+      font-size: 10px;
+    }
+
+  }
+}
+.reflex__cloud{
+  margin-left: -55%;
+  &__goalie{
+    position: relative;
+    top:10%;
+    left: 10%;
+    z-index:1;
+    width:250px;
+    height:200px;
+    background: url("../images/goalie_all.png") 0 0;
+    @media (max-width: 800px) {
+      width:125px;
+      height: 100px;
+      background: url("../images/goalie_all2.png") 0 0;
+    }
+    @media (max-width: 400px) {
+      width:62.5px;
+      height: 50px;
+      background: url("../images/goalie_all3.png") 0 0;
+    }
+  }
+}
+.cloud{
+  // display:none;
+  width:300px;
+  height:250px;
+  background-image: url("../images/cloud.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  @media (max-width: 800px) {
+    width:150px;
+    height:125px;
+  }
+  @media (max-width: 400px) {
+    width:75px;
+    height:62.5px;
+  }
+}
+
+#strenght{
+  width:100%;
+  height:300px;
+  @media (max-width: 800px) {
+    height:200px;
+  }
+  @media (max-width: 400px) {
+    height:150px;
+  }
+}
+
+.strenght__cloud{
+  float: right;
+  margin-right: -55%;
+  &__animation{
+    position: relative;
+    top:10%;
+    left: 10%;
+    z-index:1;
+    width:250px;
+    height:200px;
+    background: url("../images/strengh_all.png") 0 0;
+    @media (max-width: 800px) {
+      width:125px;
+      height:100px;
+      background: url("../images/strengh_all2.png") 0 0;
+    }
+    @media (max-width: 400px) {
+      width:62.5px;
+      height: 50px;
+      background: url("../images/strengh_all3.png") 0 0;
+    }
+  }
+}
+
+.strenght__text{
+  position: relative;
+  top:15%;
+  width:20%;
+  float: left;
+  margin-left: -55%;
+  @media (max-width: 800px) {
+    top:5%;
+  }
+  p{
+    font-size: 22px;
+    color:white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px darkgrey, 0 0 25px white, 0 0 5px black;
+    @media (max-width: 800px) {
+      font-size: 14px;
+    }
+    @media (max-width: 400px) {
+      font-size: 10px;
+    }
+  }
+}
+#speed{
+  width:100%;
+  height:300px;
+  @media (max-width: 800px) {
+    height:200px;
+  }
+  @media (max-width: 400px) {
+    height:150px;
+  }
+}
+
+.speed__cloud{
+  float: left;
+  margin-left: -55%;
+  &__animation{
+    position: relative;
+    top:10%;
+    left: 10%;
+    z-index:1;
+    width:250px;
+    height:200px;
+    background: url("../images/run_all.png") 0 0;
+    @media (max-width: 800px) {
+      width:125px;
+      height:100px;
+      background: url("../images/run_all2.png") 0 0;
+    }
+    @media (max-width: 400px) {
+      width:62.5px;
+      height: 50px;
+      background: url("../images/run_all3.png") 0 0;
+    }
+  }
+}
+
+.speed__text{
+  position: relative;
+  top:15%;
+  width:20%;
+  float: right;
+  margin-right: -55%;
+  @media (max-width: 800px) {
+    top:5%;
+  }
+  p{
+    font-size: 22px;
+    color:white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px darkgrey, 0 0 25px white, 0 0 5px black;
+    @media (max-width: 800px) {
+      font-size: 14px;
+    }
+    @media (max-width: 400px) {
+      font-size: 10px;
+    }
+  }
+}
+
+#dribble{
+  width:100%;
+  height:300px;
+  @media (max-width: 800px) {
+    height:200px;
+  }
+  @media (max-width: 400px) {
+    height:150px;
+  }
+}
+
+.dribble__cloud{
+  float: right;
+  margin-right: -55%;
+  &__animation{
+    position: relative;
+    top:10%;
+    left: 10%;
+    z-index:1;
+    width:250px;
+    height:200px;
+    background: url("../images/dribble_all.png") 0 0;
+    @media (max-width: 800px) {
+      width:125px;
+      height:100px;
+      background: url("../images/dribble_all2.png") 0 0;
+    }
+    @media (max-width: 400px) {
+      width:62.5px;
+      height:50px;
+      background: url("../images/dribble_all3.png") 0 0;
+    }
+  }
+}
+
+.dribble__text{
+  position: relative;
+  top:15%;
+  width:20%;
+  float: left;
+  margin-left: -55%;
+  @media (max-width: 800px) {
+    top:5%;
+  }
+  p{
+    font-size: 22px;
+    color:white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px darkgrey, 0 0 25px white, 0 0 5px black;
+    @media (max-width: 800px) {
+      font-size: 14px;
+    }
+    @media (max-width: 400px) {
+      font-size: 10px;
+    }
+  }
+}
+
+
+#pass{
+  width:100%;
+  height:300px;
+  @media (max-width: 800px) {
+    height:200px;
+  }
+  @media (max-width: 400px) {
+    height:150px;
+  }
+}
+
+.pass__cloud{
+  float: left;
+  margin-left: -55%;
+  &__animation{
+    position: relative;
+    top:10%;
+    left: 10%;
+    z-index:1;
+    width:250px;
+    height:200px;
+    background: url("../images/pass_all.png") 0 0;
+    @media (max-width: 800px) {
+      width:125px;
+      height:100px;
+      background: url("../images/pass_all2.png") 0 0;
+    }
+    @media (max-width: 400px) {
+      width:62.5px;
+      height:50px;
+      background: url("../images/pass_all3.png") 0 0;
+    }
+  }
+}
+
+.pass__text{
+  position: relative;
+  top:15%;
+  width:20%;
+  float: right;
+  margin-right: -55%;
+  @media (max-width: 800px) {
+    top:5%;
+  }
+  p{
+    font-size: 22px;
+    color:white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px darkgrey, 0 0 25px white, 0 0 5px black;
+    @media (max-width: 800px) {
+      font-size: 14px;
+    }
+    @media (max-width: 400px) {
+      font-size: 10px;
+    }
+  }
+}
+
+#long__pass{
+  width:100%;
+  height:300px;
+  @media (max-width: 800px) {
+    height:200px;
+  }
+  @media (max-width: 400px) {
+    height:150px;
+  }
+}
+
+.long__pass__cloud{
+  float: right;
+  margin-right: -55%;
+  &__animation{
+    position: relative;
+    top:10%;
+    left: 10%;
+    z-index:1;
+    width:250px;
+    height:200px;
+    background: url("../images/long_pass_all.png") 0 0;
+    @media (max-width: 800px) {
+      width:125px;
+      height:100px;
+      background: url("../images/long_pass_all2.png") 0 0;
+    }
+    @media (max-width: 400px) {
+      width:62.5px;
+      height:50px;
+      background: url("../images/long_pass_all3.png") 0 0;
+    }
+  }
+}
+
+.long__pass__text{
+  position: relative;
+  top:15%;
+  width:20%;
+  float: left;
+  margin-left: -55%;
+  @media (max-width: 800px) {
+    top:5%;
+  }
+  p{
+    font-size: 22px;
+    color:white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px darkgrey, 0 0 25px white, 0 0 5px black;
+    @media (max-width: 800px) {
+      font-size:14px;
+    }
+    @media (max-width: 400px) {
+      font-size:10px;
+    }
+  }
+}
+
+#shot{
+  width:100%;
+  height:300px;
+  @media (max-width: 800px) {
+    height:200px;
+  }
+  @media (max-width: 400px) {
+    height:150px;
+  }
+}
+
+.shot__cloud{
+  float: left;
+  margin-left: -55%;
+  &__animation{
+    position: relative;
+    top:10%;
+    left: 10%;
+    z-index:1;
+    width:250px;
+    height:200px;
+    background: url("../images/shot_all.png") 0 0;
+    @media (max-width: 800px) {
+      width:125px;
+      height:100px;
+      background: url("../images/shot_all2.png") 0 0;
+    }
+    @media (max-width: 400px) {
+      width:62.5px;
+      height:50px;
+      background: url("../images/shot_all3.png") 0 0;
+    }
+  }
+}
+
+.shot__text{
+  position: relative;
+  top:15%;
+  width:20%;
+  float: right;
+  margin-right: -55%;
+  @media (max-width: 800px) {
+    top:5%;
+  }
+  p{
+    font-size: 22px;
+    color:white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px darkgrey, 0 0 25px white, 0 0 5px black;
+    @media (max-width: 800px) {
+      font-size:14px;
+    }
+    @media (max-width: 400px) {
+      font-size:10px;
+    }
+  }
+}
+
+#headers{
+  width:100%;
+  height:300px;
+  @media (max-width: 800px) {
+    height:200px;
+  }
+  @media (max-width: 400px) {
+    height:150px;
+  }
+}
+
+.headers__cloud{
+  float: right;
+  margin-right: -55%;
+  &__animation{
+    position: relative;
+    top:10%;
+    left: 10%;
+    z-index:1;
+    width:250px;
+    height:200px;
+    background: url("../images/headers_all.png") 0 0;
+    @media (max-width: 800px) {
+      width:125px;
+      height:100px;
+      background: url("../images/headers_all2.png") 0 0;
+    }
+    @media (max-width: 400px) {
+      width:62.5px;
+      height:50px;
+      background: url("../images/headers_all3.png") 0 0;
+    }
+  }
+}
+
+.headers__text{
+  position: relative;
+  top:15%;
+  width:20%;
+  float: left;
+  margin-left: -55%;
+  @media (max-width: 800px) {
+    top:5%;
+  }
+  p{
+    font-size: 22px;
+    color:white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px darkgrey, 0 0 25px white, 0 0 5px black;
+    @media (max-width: 800px) {
+      font-size:14px;
+    }
+    @media (max-width: 400px) {
+      font-size:10px;
+    }
+  }
+}
+
+#tactic{
+  width:100%;
+  height:300px;
+  @media (max-width: 800px) {
+    height:200px;
+  }
+  @media (max-width: 400px) {
+    height:150px;
+  }
+}
+
+.tactic__cloud{
+  float: left;
+  margin-left: -55%;
+  &__animation{
+    position: relative;
+    top:10%;
+    left: 10%;
+    z-index:1;
+    width:250px;
+    height:200px;
+    background: url("../images/tactic_all.png") 0 0;
+    @media (max-width: 800px) {
+      width:125px;
+      height:100px;
+      background: url("../images/tactic_all2.png") 0 0;
+    }
+    @media (max-width: 400px) {
+      width:62.5px;
+      height:50px;
+      background: url("../images/tactic_all3.png") 0 0;
+    }
+  }
+}
+
+.tactic__text{
+  position: relative;
+  top:15%;
+  width:20%;
+  float: right;
+  margin-right: -55%;
+  @media (max-width: 800px) {
+    top:5%;
+  }
+  p{
+    font-size: 22px;
+    color:white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px darkgrey, 0 0 25px white, 0 0 5px black;
+    @media (max-width: 800px) {
+      font-size: 14px;
+    }
+    @media (max-width: 400px) {
+      font-size: 10px;
+    }
+  }
+}
+
+#contact{
+  width:100%;
+  height:500px;
+  background-image: url("../images/contact2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80% 100%;
+  box-shadow:0 0 25px 15px white inset;
+  @media (max-width: 1200px) {
+    background-size: 100% 100%;
+  }
+  @media (max-width: 400px) {
+    background-size: 120% 100%;
+  }
+}
+.info{
+width:50%;
+height:500px;
+float: left;
+display:block;
+text-align: center;
+font-size: 18px;
+font-weight: bold;
+@media (max-width: 1200px) {
+  font-size: 14px;
+}
+@media (max-width: 800px) {
+  font-size: 10px;
+}
+@media (max-width: 500px) {
+  font-size: 8px;
+}
+.info_1{
+  font-family: 'Coming Soon';
+  margin-top: 16%;
+  width:25%;
+  margin-left: 58%;
+  @media (max-width: 1200px) {
+    margin-top: 20%;
+    margin-left: 52%;
+
+  }
+  @media (max-width: 1100px) {
+    margin-top: 22%;
+  }
+  @media (max-width: 950px) {
+    margin-top: 25%;
+  }
+  @media (max-width: 850px) {
+    margin-top: 30%;
+  }
+  @media (max-width: 800px) {
+    margin-top: 30%;
+  }
+  @media (max-width: 700px) {
+    margin-top: 35%;
+  }
+  @media (max-width: 600px) {
+    margin-top: 40%;
+  }
+  @media (max-width: 500px) {
+    margin-top: 50%;
+  }
+  @media (max-width: 400px) {
+    margin-top: 60%;
+    margin-left: 42%;
+  }
+  @media (max-width: 300px) {
+    margin-top: 75%;
+  }
+  @media (max-width: 250px) {
+    margin-top: 82%;
+  }
+}
+.info_2{
+  font-family: 'Coming Soon';
+  margin-top: 12%;
+  width:25%;
+  margin-left: 58%;
+  @media (max-width: 1200px) {
+    margin-top: 20%;
+    margin-left: 52%;
+  }
+  @media (max-width: 1050px) {
+    margin-top: 22%;
+  }
+  @media (max-width: 850px) {
+    margin-top: 19%;
+  }
+  @media (max-width: 800px) {
+    margin-top: 35%;
+  }
+  @media (max-width: 700px) {
+    margin-top: 40%;
+  }
+  @media (max-width: 600px) {
+    margin-top: 48%;
+  }
+  @media (max-width: 500px) {
+    margin-top: 58%;
+  }
+  @media (max-width: 450px) {
+    margin-top: 75%;
+  }
+  @media (max-width: 400px) {
+    margin-left: 42%;
+    margin-top: 75%;
+  }
+  @media (max-width: 250px) {
+    margin-top: 88%;
+  }
+  @media (max-width: 230px) {
+    margin-top: 113%;
+  }
+}
+}
+
+
+.contact{
+  float: left;
+width:50%;
+height:500px;
+display:block;
+h4{
+  font-family: 'Coming Soon';
+  margin-left: -20%;
+  width:200px;
+  text-align: center;
+  @media (max-width: 1200px) {
+    margin-left:-40%;
+  }
+  @media (max-width: 750px) {
+    margin-left:-60%;
+  }
+  @media (max-width: 600px) {
+    margin-left:-80%;
+  }
+  @media (max-width: 400px) {
+    margin-left:-100%;
+    font-size: 14px;
+  }
+  @media (max-width: 300px) {
+    margin-left:-150%;
+    font-size: 10px;
+  }
+  @media (max-width: 250px) {
+    margin-left:-190%;
+    font-size: 10px;
+  }
+  @media (max-width: 220px) {
+    margin-left:-230%;
+    font-size: 10px;
+  }
+}
+.contact1{
+  width:25%;
+  margin-top: 15%;
+  margin-left: 20%;
+  @media (max-width: 1200px) {
+    margin-top: 20%;
+  }
+  @media (max-width: 900px) {
+    margin-top: 22%;
+  }
+  @media (max-width: 750px) {
+    margin-top: 30%;
+  }
+  @media (max-width: 600px) {
+    margin-top: 35%;
+  }
+  @media (max-width: 550px) {
+    margin-top: 45%;
+  }
+  @media (max-width: 500px) {
+    margin-left: 15%;
+  }
+  @media (max-width: 450px) {
+    margin-left: 12.5%;
+  }
+  @media (max-width: 350px) {
+    margin-left: 8.5%;
+    margin-top: 60%;
+  }
+  @media (max-width: 320px) {
+    margin-left: 6.5%;
+    margin-top: 60%;
+  }
+  @media (max-width: 300px) {
+    margin-left: 6.5%;
+    margin-top: 75%;
+  }
+  @media (max-width: 220px) {
+    margin-left: 6.5%;
+    margin-top: 95%;
+  }
+  .name{
+    width:200px;
+    margin-left: -25%;
+    text-align: center;
+    margin-bottom: 5%;
+    @media (max-width: 1200px) {
+      margin-left: -40%;
+    }
+    @media (max-width: 750px) {
+      margin-left: -40%;
+      width:150px;
+    }
+    @media (max-width: 600px) {
+      margin-left: -30%;
+      width:120px;
+    }
+    @media (max-width: 400px) {
+      margin-left: 0;
+      width:100px;
+    }
+    @media (max-width: 300px) {
+      margin-left: 50%;
+      width:50px;
+      font-size: 6px;
+    }
+  }
+  .email{
+    width:200px;
+    margin-left: -25%;
+    text-align: center;
+    margin-bottom: 5%;
+    @media (max-width: 1200px) {
+      margin-left: -40%;
+    }
+    @media (max-width: 750px) {
+      margin-left: -40%;
+      width:150px;
+    }
+    @media (max-width: 600px) {
+      margin-left: -30%;
+      width:120px;
+    }
+    @media (max-width: 400px) {
+      margin-left: 0;
+      width:100px;
+    }
+    @media (max-width: 300px) {
+      margin-left: 50%;
+      width:50px;
+      font-size:6px;
+    }
+  }
+
+  .information{
+    margin-top:55%;
+    font-family: 'Coming Soon';
+
+    @media (max-width: 1200px) {
+      margin-top: 70%;
+    }
+    @media (max-width: 950px) {
+      margin-top: 80%;
+    }
+    @media (max-width: 900px) {
+      margin-top: 90%;
+    }
+    @media (max-width: 800px) {
+      margin-top: 105%;
+    }
+    @media (max-width: 640px) {
+      margin-top: 120%;
+    }
+    @media (max-width: 600px) {
+      margin-left: -85%;
+    }
+    @media (max-width: 470px) {
+      margin-top: 160%;
+    }
+    @media (max-width: 420px) {
+      margin-top: 220%;
+    }
+    @media (max-width: 400px) {
+      margin-top: 220%;
+      margin-left: -95%;
+      font-size: 14px;
+    }
+    @media (max-width: 300px) {
+      margin-top: 300%;
+      margin-left: -165%;
+      font-size: 10px;
+    }
+    @media (max-width: 260px) {
+      margin-top: 400%;
+      margin-left: -165%;
+      font-size: 10px;
+    }
+    @media (max-width: 250px) {
+      margin-left: -205%;
+    }
+    @media (max-width: 220px) {
+      margin-left: -225%;
+    }
+  }
+  textarea{
+    width:200px;
+    max-width: 200px;
+    min-width: 200px;
+    max-height: 70px;
+    margin-left: -25%;
+    text-align: center;
+    @media (max-width: 1200px) {
+      margin-left: -50%;
+    }
+    @media (max-width: 750px) {
+      margin-left: -40%;
+      width: 150px;
+      max-width: 150px;
+      min-width: 150px;
+    }
+    @media (max-width: 600px) {
+      margin-left: -35%;
+      width: 120px;
+      max-width: 120px;
+      min-width: 120px;
+    }
+    @media (max-width: 400px) {
+      margin-left: 0;
+      width: 100px;
+      max-width: 100px;
+      min-width: 100px;
+    }
+    @media (max-width: 400px) {
+      margin-left: 50%;
+      width: 50px;
+      max-width: 50px;
+      min-width: 50px;
+      font-size: 6px;
+    }
+  }
+  .submit{
+    margin-top: 5%;
+    width:100px;
+    height:40px;
+    color:blue;
+    background-color: lightBlue;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 40px;
+    cursor:pointer;
+    text-transform: uppercase;
+    @media (max-width: 600px) {
+      margin-left: -20%;
+    }
+    @media (max-width: 400px) {
+      margin-left: 0;
+    }
+    @media (max-width: 300px) {
+      margin-left: 50%;
+      width:50px;
+      font-size: 10px;
+    }
+  }
+}
+}
+
+
+#footer{
+  width:100%;
+  height:100px;
+  p{
+    font-size: 22px;
+    line-height: 100px;
+    font-weight: bold;
+    display: inline-block;
+    width:100%;
+    text-align: center;
+    @media (max-width: 400px) {
+      font-size: 16px;
+    }
+    @media (max-width: 270px) {
+      font-size: 12px;
+    }
+  }
+}
