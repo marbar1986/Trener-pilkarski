@@ -899,4 +899,41 @@ else if($(window).width() < 400){
 
   });
 
+  var submit = $(".submit");
+  var emailElem = $(".email");
+  var nameElem = $(".name");
+  var infoElem = $(".textarea");
+  var massage = $(".error");
+
+  submit.on('click',function(e){
+      e.preventDefault();
+
+      if(emailElem.val().indexOf('@') == -1){
+          emailElem.addClass('box-error');
+      }else{
+          emailElem.removeClass('box-error');
+      }
+      if( nameElem.val().trim().length <= 6 ){
+          nameElem.addClass('box-error');
+      }else{
+          nameElem.removeClass('box-error');
+      }
+      if( infoElem.val().trim().length <= 6 ){
+          infoElem.addClass('box-error');
+      }else{
+          infoElem.removeClass('box-error');
+      }
+
+      if(emailElem.hasClass("box-error") || nameElem.hasClass("box-error")||infoElem.hasClass("box-error")){
+        massage.text("");
+        massage.css("color","red");
+        massage.text("Wypełnij poprawnie pola z czerwoną ramka");
+      }
+      else{
+        massage.text("");
+        massage.css("color","green");
+        massage.text("Informacje wysłane poprawnie");
+      }
+  })
+
 })
