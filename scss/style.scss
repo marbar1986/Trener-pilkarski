@@ -1106,6 +1106,12 @@ h4{
   color:red;
   text-align: center;
   line-height: 30px;
+  @media (max-width: 400px) {
+    font-size: 14px;
+  }
+  @media (max-width: 300px) {
+    font-size: 10px;
+  }
 }
 
 .box-error{
