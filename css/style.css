@@ -340,7 +340,7 @@ html, body {
 
 @media (max-width: 400px) {
   .strenght__cloud__animation {
-    background: url("../images/strenghs_all3.png") 0 0; } }
+    background: url("../images/strengh_all3.png") 0 0; } }
 
 .dribble__cloud__animation {
   background: url("../images/dribble_all.png") 0 0; }
