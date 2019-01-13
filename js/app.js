@@ -138,7 +138,7 @@ else if($(window).width() < 400){
   var goalie_pic3 = "goalie_all3";
   function goalie(step,max,picture){
     goalie = setInterval ( () => {
-  $(".reflex__cloud__goalie").css("background",`url("./images/${picture}.png")-${goalie_position}px 0px`);
+  $(".reflex__cloud__animation").css("background",`url("./images/${picture}.png")-${goalie_position}px 0px`);
 
   if (goalie_position < max)
   { goalie_position = goalie_position + step}

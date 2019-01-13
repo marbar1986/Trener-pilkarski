@@ -33,9 +33,6 @@ html, body {
   .menu{
     position: fixed;
     z-index:2;
-    // position: absolute;
-    // top:0;
-    // left:0;
     width:100%;
     height:100px;
     position: fixed;
@@ -87,7 +84,6 @@ html, body {
           display: block;
           width:100%;
           font-weight: bold;
-          // text-transform: uppercase;
           height:100%;
           line-height:100px;
           text-decoration: none;
@@ -114,7 +110,6 @@ html, body {
           display: block;
           width:100%;
           font-weight: bold;
-          // text-transform: uppercase;
           height:25px;
           line-height:25px;
           text-decoration: none;
@@ -151,26 +146,6 @@ html, body {
 #start{
   width:100%;
   height:250px;
-  // position:relative;
-  // top:25%;
-  // left:50%;
-  // margin-left:-37.5px;
-  // .arrow{
-  //   position: relative;
-  //   top:10%;
-  //   left:50%;
-  //   margin-left:-25px;
-  //   width:50px;
-  //   height:100px;
-  //   background: url("../images/arrow.png") 0 0;
-  //   z-index:1;
-  // }
-  // @media (max-width: 800px) {
-  //   height:200px;
-  // }
-  // @media (max-width: 400px) {
-  //   height:150px;
-  // }
 }
 .sprint_player{
   position: fixed;
@@ -198,7 +173,7 @@ html, body {
   }
 }
 
-#reflex{
+#reflex, #strenght, #speed, #dribble, #pass, #long__pass, #shot, #headers, #tactic,{
   width:100%;
   height:300px;
   @media (max-width: 800px) {
@@ -209,7 +184,7 @@ html, body {
   }
 }
 
-.reflex__text{
+.reflex__text, .speed__text, .pass__text, .shot__text, .tactic__text{
   position: relative;
   top:15%;
   width:20%;
@@ -229,33 +204,186 @@ top:5%;
     @media (max-width: 400px) {
       font-size: 10px;
     }
-
   }
 }
-.reflex__cloud{
+
+.strenght__text, .dribble__text, .long__pass__text, .headers__text{
+  position: relative;
+  top:15%;
+  width:20%;
+  float: left;
   margin-left: -55%;
-  &__goalie{
+  @media (max-width: 800px) {
+    top:5%;
+  }
+  p{
+    font-size: 22px;
+    color:white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px darkgrey, 0 0 25px white, 0 0 5px black;
+    @media (max-width: 800px) {
+      font-size: 14px;
+    }
+    @media (max-width: 400px) {
+      font-size: 10px;
+    }
+  }
+}
+
+.reflex__cloud, .speed__cloud, .pass__cloud, .shot__cloud, .tactic__cloud{
+  margin-left: -55%;
+  &__animation{
     position: relative;
     top:10%;
     left: 10%;
     z-index:1;
     width:250px;
     height:200px;
-    background: url("../images/goalie_all.png") 0 0;
     @media (max-width: 800px) {
       width:125px;
       height: 100px;
-      background: url("../images/goalie_all2.png") 0 0;
     }
     @media (max-width: 400px) {
       width:62.5px;
       height: 50px;
+    }
+  }
+}
+
+.reflex__cloud{
+  &__animation{
+    background: url("../images/goalie_all.png") 0 0;
+    @media (max-width: 800px) {
+      background: url("../images/goalie_all2.png") 0 0;
+    }
+    @media (max-width: 400px) {
       background: url("../images/goalie_all3.png") 0 0;
     }
   }
 }
+.speed__cloud{
+  &__animation{
+    background: url("../images/run_all.png") 0 0;
+    @media (max-width: 800px) {
+      background: url("../images/run_all2.png") 0 0;
+    }
+    @media (max-width: 400px) {
+      background: url("../images/run_all3.png") 0 0;
+    }
+  }
+}
+.pass__cloud{
+  &__animation{
+    background: url("../images/pass_all.png") 0 0;
+    @media (max-width: 800px) {
+      background: url("../images/pass_all2.png") 0 0;
+    }
+    @media (max-width: 400px) {
+      background: url("../images/pass_all3.png") 0 0;
+    }
+  }
+}
+.shot__cloud{
+  &__animation{
+    background: url("../images/shot_all.png") 0 0;
+    @media (max-width: 800px) {
+      background: url("../images/shot_all2.png") 0 0;
+    }
+    @media (max-width: 400px) {
+      background: url("../images/shot_all3.png") 0 0;
+    }
+  }
+}
+.tactic__cloud{
+  &__animation{
+    background: url("../images/tactic_all.png") 0 0;
+    @media (max-width: 800px) {
+      background: url("../images/tactic_all2.png") 0 0;
+    }
+    @media (max-width: 400px) {
+      background: url("../images/tactic_all3.png") 0 0;
+    }
+  }
+}
+
+.strenght__cloud, .dribble__cloud, .long__pass__cloud, .headers__cloud{
+  float: right;
+  margin-right: -55%;
+  &__animation{
+    position: relative;
+    top:10%;
+    left: 10%;
+    z-index:1;
+    width:250px;
+    height:200px;
+    @media (max-width: 800px) {
+      width:125px;
+      height:100px;
+    }
+    @media (max-width: 400px) {
+      width:62.5px;
+      height: 50px;
+    }
+  }
+}
+
+.strenght__cloud{
+  &__animation{
+    background: url("../images/strengh_all.png") 0 0;
+    @media (max-width: 800px) {
+      background: url("../images/strengh_all2.png") 0 0;
+    }
+    @media (max-width: 400px) {
+      background: url("../images/strenghs_all3.png") 0 0;
+    }
+  }
+}
+.dribble__cloud{
+  &__animation{
+    background: url("../images/dribble_all.png") 0 0;
+    @media (max-width: 800px) {
+      background: url("../images/dribble_all2.png") 0 0;
+    }
+    @media (max-width: 400px) {
+      background: url("../images/dribble_all3.png") 0 0;
+    }
+  }
+}
+.dribble__cloud{
+  &__animation{
+    background: url("../images/dribble_all.png") 0 0;
+    @media (max-width: 800px) {
+      background: url("../images/dribble_all2.png") 0 0;
+    }
+    @media (max-width: 400px) {
+      background: url("../images/dribble_all3.png") 0 0;
+    }
+  }
+}
+.long__pass__cloud{
+  &__animation{
+    background: url("../images/long_pass_all.png") 0 0;
+    @media (max-width: 800px) {
+      background: url("../images/long_pass_all2.png") 0 0;
+    }
+    @media (max-width: 400px) {
+      background: url("../images/long_pass_all3.png") 0 0;
+    }
+  }
+}
+.headers__cloud{
+  &__animation{
+    background: url("../images/headers_all.png") 0 0;
+    @media (max-width: 800px) {
+      background: url("../images/headers_all2.png") 0 0;
+    }
+    @media (max-width: 400px) {
+      background: url("../images/headers_all3.png") 0 0;
+    }
+  }
+}
+
 .cloud{
-  // display:none;
   width:300px;
   height:250px;
   background-image: url("../images/cloud.png");
@@ -269,470 +397,6 @@ top:5%;
   @media (max-width: 400px) {
     width:75px;
     height:62.5px;
-  }
-}
-
-#strenght{
-  width:100%;
-  height:300px;
-  @media (max-width: 800px) {
-    height:200px;
-  }
-  @media (max-width: 400px) {
-    height:150px;
-  }
-}
-
-.strenght__cloud{
-  float: right;
-  margin-right: -55%;
-  &__animation{
-    position: relative;
-    top:10%;
-    left: 10%;
-    z-index:1;
-    width:250px;
-    height:200px;
-    background: url("../images/strengh_all.png") 0 0;
-    @media (max-width: 800px) {
-      width:125px;
-      height:100px;
-      background: url("../images/strengh_all2.png") 0 0;
-    }
-    @media (max-width: 400px) {
-      width:62.5px;
-      height: 50px;
-      background: url("../images/strengh_all3.png") 0 0;
-    }
-  }
-}
-
-.strenght__text{
-  position: relative;
-  top:15%;
-  width:20%;
-  float: left;
-  margin-left: -55%;
-  @media (max-width: 800px) {
-    top:5%;
-  }
-  p{
-    font-size: 22px;
-    color:white;
-    font-weight: bold;
-    text-shadow: 1px 1px 2px darkgrey, 0 0 25px white, 0 0 5px black;
-    @media (max-width: 800px) {
-      font-size: 14px;
-    }
-    @media (max-width: 400px) {
-      font-size: 10px;
-    }
-  }
-}
-#speed{
-  width:100%;
-  height:300px;
-  @media (max-width: 800px) {
-    height:200px;
-  }
-  @media (max-width: 400px) {
-    height:150px;
-  }
-}
-
-.speed__cloud{
-  float: left;
-  margin-left: -55%;
-  &__animation{
-    position: relative;
-    top:10%;
-    left: 10%;
-    z-index:1;
-    width:250px;
-    height:200px;
-    background: url("../images/run_all.png") 0 0;
-    @media (max-width: 800px) {
-      width:125px;
-      height:100px;
-      background: url("../images/run_all2.png") 0 0;
-    }
-    @media (max-width: 400px) {
-      width:62.5px;
-      height: 50px;
-      background: url("../images/run_all3.png") 0 0;
-    }
-  }
-}
-
-.speed__text{
-  position: relative;
-  top:15%;
-  width:20%;
-  float: right;
-  margin-right: -55%;
-  @media (max-width: 800px) {
-    top:5%;
-  }
-  p{
-    font-size: 22px;
-    color:white;
-    font-weight: bold;
-    text-shadow: 1px 1px 2px darkgrey, 0 0 25px white, 0 0 5px black;
-    @media (max-width: 800px) {
-      font-size: 14px;
-    }
-    @media (max-width: 400px) {
-      font-size: 10px;
-    }
-  }
-}
-
-#dribble{
-  width:100%;
-  height:300px;
-  @media (max-width: 800px) {
-    height:200px;
-  }
-  @media (max-width: 400px) {
-    height:150px;
-  }
-}
-
-.dribble__cloud{
-  float: right;
-  margin-right: -55%;
-  &__animation{
-    position: relative;
-    top:10%;
-    left: 10%;
-    z-index:1;
-    width:250px;
-    height:200px;
-    background: url("../images/dribble_all.png") 0 0;
-    @media (max-width: 800px) {
-      width:125px;
-      height:100px;
-      background: url("../images/dribble_all2.png") 0 0;
-    }
-    @media (max-width: 400px) {
-      width:62.5px;
-      height:50px;
-      background: url("../images/dribble_all3.png") 0 0;
-    }
-  }
-}
-
-.dribble__text{
-  position: relative;
-  top:15%;
-  width:20%;
-  float: left;
-  margin-left: -55%;
-  @media (max-width: 800px) {
-    top:5%;
-  }
-  p{
-    font-size: 22px;
-    color:white;
-    font-weight: bold;
-    text-shadow: 1px 1px 2px darkgrey, 0 0 25px white, 0 0 5px black;
-    @media (max-width: 800px) {
-      font-size: 14px;
-    }
-    @media (max-width: 400px) {
-      font-size: 10px;
-    }
-  }
-}
-
-
-#pass{
-  width:100%;
-  height:300px;
-  @media (max-width: 800px) {
-    height:200px;
-  }
-  @media (max-width: 400px) {
-    height:150px;
-  }
-}
-
-.pass__cloud{
-  float: left;
-  margin-left: -55%;
-  &__animation{
-    position: relative;
-    top:10%;
-    left: 10%;
-    z-index:1;
-    width:250px;
-    height:200px;
-    background: url("../images/pass_all.png") 0 0;
-    @media (max-width: 800px) {
-      width:125px;
-      height:100px;
-      background: url("../images/pass_all2.png") 0 0;
-    }
-    @media (max-width: 400px) {
-      width:62.5px;
-      height:50px;
-      background: url("../images/pass_all3.png") 0 0;
-    }
-  }
-}
-
-.pass__text{
-  position: relative;
-  top:15%;
-  width:20%;
-  float: right;
-  margin-right: -55%;
-  @media (max-width: 800px) {
-    top:5%;
-  }
-  p{
-    font-size: 22px;
-    color:white;
-    font-weight: bold;
-    text-shadow: 1px 1px 2px darkgrey, 0 0 25px white, 0 0 5px black;
-    @media (max-width: 800px) {
-      font-size: 14px;
-    }
-    @media (max-width: 400px) {
-      font-size: 10px;
-    }
-  }
-}
-
-#long__pass{
-  width:100%;
-  height:300px;
-  @media (max-width: 800px) {
-    height:200px;
-  }
-  @media (max-width: 400px) {
-    height:150px;
-  }
-}
-
-.long__pass__cloud{
-  float: right;
-  margin-right: -55%;
-  &__animation{
-    position: relative;
-    top:10%;
-    left: 10%;
-    z-index:1;
-    width:250px;
-    height:200px;
-    background: url("../images/long_pass_all.png") 0 0;
-    @media (max-width: 800px) {
-      width:125px;
-      height:100px;
-      background: url("../images/long_pass_all2.png") 0 0;
-    }
-    @media (max-width: 400px) {
-      width:62.5px;
-      height:50px;
-      background: url("../images/long_pass_all3.png") 0 0;
-    }
-  }
-}
-
-.long__pass__text{
-  position: relative;
-  top:15%;
-  width:20%;
-  float: left;
-  margin-left: -55%;
-  @media (max-width: 800px) {
-    top:5%;
-  }
-  p{
-    font-size: 22px;
-    color:white;
-    font-weight: bold;
-    text-shadow: 1px 1px 2px darkgrey, 0 0 25px white, 0 0 5px black;
-    @media (max-width: 800px) {
-      font-size:14px;
-    }
-    @media (max-width: 400px) {
-      font-size:10px;
-    }
-  }
-}
-
-#shot{
-  width:100%;
-  height:300px;
-  @media (max-width: 800px) {
-    height:200px;
-  }
-  @media (max-width: 400px) {
-    height:150px;
-  }
-}
-
-.shot__cloud{
-  float: left;
-  margin-left: -55%;
-  &__animation{
-    position: relative;
-    top:10%;
-    left: 10%;
-    z-index:1;
-    width:250px;
-    height:200px;
-    background: url("../images/shot_all.png") 0 0;
-    @media (max-width: 800px) {
-      width:125px;
-      height:100px;
-      background: url("../images/shot_all2.png") 0 0;
-    }
-    @media (max-width: 400px) {
-      width:62.5px;
-      height:50px;
-      background: url("../images/shot_all3.png") 0 0;
-    }
-  }
-}
-
-.shot__text{
-  position: relative;
-  top:15%;
-  width:20%;
-  float: right;
-  margin-right: -55%;
-  @media (max-width: 800px) {
-    top:5%;
-  }
-  p{
-    font-size: 22px;
-    color:white;
-    font-weight: bold;
-    text-shadow: 1px 1px 2px darkgrey, 0 0 25px white, 0 0 5px black;
-    @media (max-width: 800px) {
-      font-size:14px;
-    }
-    @media (max-width: 400px) {
-      font-size:10px;
-    }
-  }
-}
-
-#headers{
-  width:100%;
-  height:300px;
-  @media (max-width: 800px) {
-    height:200px;
-  }
-  @media (max-width: 400px) {
-    height:150px;
-  }
-}
-
-.headers__cloud{
-  float: right;
-  margin-right: -55%;
-  &__animation{
-    position: relative;
-    top:10%;
-    left: 10%;
-    z-index:1;
-    width:250px;
-    height:200px;
-    background: url("../images/headers_all.png") 0 0;
-    @media (max-width: 800px) {
-      width:125px;
-      height:100px;
-      background: url("../images/headers_all2.png") 0 0;
-    }
-    @media (max-width: 400px) {
-      width:62.5px;
-      height:50px;
-      background: url("../images/headers_all3.png") 0 0;
-    }
-  }
-}
-
-.headers__text{
-  position: relative;
-  top:15%;
-  width:20%;
-  float: left;
-  margin-left: -55%;
-  @media (max-width: 800px) {
-    top:5%;
-  }
-  p{
-    font-size: 22px;
-    color:white;
-    font-weight: bold;
-    text-shadow: 1px 1px 2px darkgrey, 0 0 25px white, 0 0 5px black;
-    @media (max-width: 800px) {
-      font-size:14px;
-    }
-    @media (max-width: 400px) {
-      font-size:10px;
-    }
-  }
-}
-
-#tactic{
-  width:100%;
-  height:300px;
-  @media (max-width: 800px) {
-    height:200px;
-  }
-  @media (max-width: 400px) {
-    height:150px;
-  }
-}
-
-.tactic__cloud{
-  float: left;
-  margin-left: -55%;
-  &__animation{
-    position: relative;
-    top:10%;
-    left: 10%;
-    z-index:1;
-    width:250px;
-    height:200px;
-    background: url("../images/tactic_all.png") 0 0;
-    @media (max-width: 800px) {
-      width:125px;
-      height:100px;
-      background: url("../images/tactic_all2.png") 0 0;
-    }
-    @media (max-width: 400px) {
-      width:62.5px;
-      height:50px;
-      background: url("../images/tactic_all3.png") 0 0;
-    }
-  }
-}
-
-.tactic__text{
-  position: relative;
-  top:15%;
-  width:20%;
-  float: right;
-  margin-right: -55%;
-  @media (max-width: 800px) {
-    top:5%;
-  }
-  p{
-    font-size: 22px;
-    color:white;
-    font-weight: bold;
-    text-shadow: 1px 1px 2px darkgrey, 0 0 25px white, 0 0 5px black;
-    @media (max-width: 800px) {
-      font-size: 14px;
-    }
-    @media (max-width: 400px) {
-      font-size: 10px;
-    }
   }
 }
 
@@ -852,7 +516,6 @@ font-weight: bold;
   }
 }
 }
-
 
 .contact{
   float: left;
